@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="author" content="Team4">
+    <meta name="description" content="Homepage">
+    <meta name="keyword" content="printer"> 
+    <title>Homepage</title>
+    <link rel="stylesheet" href="../Development/Css/index.css">
+    <style>
+        body {
+            background-color: white;
+        }
+/*styling for slider*/
+        .slider {
+            width: 100%;
+            height: 500px;
+            margin: 20px auto;
+            box-sizing: border-box;
+            overflow: hidden;
+            margin-right: 40px;
+            border-radius: 30px;
+        }
+/* styling for images of slider*/
+        .slider img {
+            width: 600px;
+            height: 500px;
+            margin-top: 0%;
+            border-radius: 30px;
+            margin-left: 440px;
+            box-shadow: 5px 5px 10px grey;
+        }
+    </style>
+</head>
+
+<body>
+    <!--creating a navbar-->
+    <nav>
+        <!--creating a logo for page-->
+        <div class="logo">
+            <h1>PrintBox</h1>
+        </div>
+        <!--Giving the name of the webpages with links-->
+        <div class="navbar">
+            <a href="../Development/index.html" style="text-decoration: none;">Home</a>
+            <a href="../Development/Pages/blogg.html"style="text-decoration: none;" >Blogs</a>
+            <a href="../Development/Pages/product.html" style="text-decoration: none;">Products</a>
+            <a href="../Development/Pages/Research.html"style="text-decoration: none;">Research</a>
+            <a href="../Development/Pages/contactus.html"style="text-decoration: none;">About us</a>
+        </div>
+    </nav>
+<!--inserting  text at the top of body-->
+    <div class="text">
+        <h2>Prints that make a statement, quality that stands out</h2>
+    </div>
+
+    <div class="slider">
+        <div id="imgs">
+            <img style="width:500px; height:500px;" src="../Development/Images/a.jpg">
+        </div>
+    </div>
+    <!--using javascript to create a image slider-->
+    <script>
+        var imag = ['../Development/Images/a.jpg', '../Development/Images/Canon_imageCLASS_LBP226dw-removebg-preview.png', '../Development/Images/b.jpg'];
+        var x = 0;
+        var igs = document.getElementById('imgs');
+        setInterval(slider, 4000);
+
+        function slider() {
+            if (x < imag.length) {
+                x = x + 1;
+            } else {
+                x = 1;
+            }
+            igs.innerHTML = "<img src=" + imag[x - 1] + ">";
+        }
+    </script>
+
+    <div>
+        <p style="text-align: center;" id="time"></p>
+        <!--inserting time using javascript-->
+        <script>
+            function updateTime() {
+                var dt = new Date();
+                document.getElementById("time").innerHTML = dt.toLocaleTimeString();
+            }
+            setInterval(updateTime, 1000)
+            updateTime();
+        </script>
+    </div>
+<!--creating the section of featured products-->
+    <div class="products">
+        <div class="head">
+            <h1>Featured products</h1>
+        </div>
+        <div class="con">
+            <!--importing image-->
+            <img src="../Development/Images/Canon_imageCLASS_LBP226dw-removebg-preview.png" alt="Canon Imageclass LBP226dw">
+            <h5>Canon Imageclass</h5>
+            <h6>Rs.29999</h6><br>
+            <!--creating button-->
+            <button><a href="../Development/Pages/CanonImageClass.html" style="text-decoration: none; color: white;">Buy Now</a></button>
+        </div>
+
+        <div class="con">
+            <!--importing image-->
+            <img src="../Development/Images/Lexmark MC3224dwe.png" alt="Lexmark MC3224dwe">
+            <h5>Lexmark MC3224dwe</h5>
+            <h6>Rs.65000</h6><br>
+             <!--creating button-->
+            <button><a href="../Development/Pages/Lexmark.html" style="text-decoration: none; color: white;">Buy Now</a></button>
+        </div>
+
+        <div class="con">
+            <!--importing image-->
+            <img src="../Development/Images/Xerox B215.png" alt="">
+            <h5>Xerox B215</h5>
+            <h6>Rs.129999</h6><br>
+             <!--creating button-->
+            <button><a href="../Development/Pages/Xerox.html" style="text-decoration: none; color: white;">Buy Now</a></button>
+        </div>
+
+        <div class="con">
+            <!--importing image-->
+            <img src="../Development/Images/HP Printer DeskJet 2320.png" alt="HP Printer DeskJet 2320">
+            <h5>HP Printer DeskJet 2320</h5>
+            <h6>Rs.87999</h6><br>
+             <!--creating button-->
+            <button><a href="../Development/Pages/HpPrinterDeskjet.html" style="text-decoration: none; color: white;">Buy Now</a></button>
+        </div>
+    </div>
+<!--creating a footer section-->
+    <div class="footer">
+        <!--first column-->
+        <div class="footertext">
+            <h2>PrintBox</h2>
+            <p>"Printing excellence, page after page"</p>
+        </div>
+        <!--Second column-->
+        <div class="footertext">
+            <h2>Support</h2>
+            <p>Contact us</p>
+            <p>FAQ</p>
+            <p>Downloads</p>
+            <p>product registration</p>
+            <p>learn more about us</p>
+        </div>
+        <!--third column-->
+        <div class="footertext">
+            <h2>Locations</h2>
+            <p>Chhabhil</p>
+            <p>New baneshwor</p>
+            <p>Bhaktapur</p>
+        </div>
+        <!--fourth column which contains sign up option-->
+        <div class="signup">
+            <h2>Connect with us</h2><br><br>
+            <!--creating a sign up form-->
+            <div class="placehold">
+                <input type="text" placeholder="enter your email">
+                <!--creating a button-->
+                <button>Sign up</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

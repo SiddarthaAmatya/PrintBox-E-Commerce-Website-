@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canon imageCLASS LBP226dw</title> <!-- Title which displays at the top of the webpage-->
+    <link rel="stylesheet" href="../Css/index.css"> <!-- It is linked with Style.Css for it designing-->
+    <script src="../JavaScript/products.js"></script><!-- It is linked to product.js for place order button's funtioning.-->
+</head>
+<!-- An interal Css in made for the main image in the detailed product page for changing the size of each images in every pages as the dimesions of image are different for every image. -->
+<style>
+    .main-img {
+        height: 550px;
+        width: auto;
+        padding-bottom: 60px;
+    }
+</style>
+
+<!-- Note: The contents and the code of detailed page are similar with only changes in the specification and dimesions of main image so the comments are made only on this page.However the functionality of the code is similar. -->
+
+<body>
+    <!-- navbar(teammates part) -->
+    <nav>
+        <div class="logo">
+            <h1>PrintBox</h1>
+        </div>
+        <div class="navbar">
+            <a href="../index.html"
+                style="text-decoration: none;">Home</a><!-- Redirects us to home page-->
+            <a href="../Pages/blogg.html"
+                style="text-decoration: none;">Blogs</a><!-- Redirects us to Blog page-->
+            <a href="../Pages/product.html"
+                style="text-decoration: none;">Products</a><!-- Redirects us to Products page-->
+            <a href="../Pages/Research.html"
+                style="text-decoration: none;">Research</a><!-- Redirects us to Research page-->
+            <a href="../Pages/contactus.html" style="text-decoration: none;">About
+                us</a><!-- Redirects us to About Us page-->
+        </div>
+    </nav>
+    <!-- navbar-ends -->
+    <div class="containerr"><!-- A div container is made to store the image inside of it as Flex-->
+        <div class="right-box">
+            <!-- A div right-box is cretaed to presen the image with a Box view inside the container-->
+            <div class="main-img-box">
+                <img src="../Images/Brother_Color_A3_Inkjet_Multi-Function_Printer-removebg-preview.png"
+                    alt="Brother Color" class="main-img">
+                <!--The above code is for the main image of the webpage and a class has been made to call the image for its corresponding Css.-->
+            </div>
+        </div>
+    </div>
+    <div class="detail-box">
+        <!--The div contains all the details of the corresponding printer such as price specification and additional place order button hasbeen added with a JavaScript-->
+        <h1 style="color: #05a7a7;">Brother HL-T4000DW</h1><!--The product name with an Inline Css for uniqueness-->
+        <p style=" color:#8b0000;">Availablity (In Stock)</p><!--This describes the availablity of the product-->
+        <h2>Rs.70000</h2><!--Price of the product-->
+        <h2>Specificaiton</h2>
+        <!--This section contains all the details of the products with an unordered list of additional specification of products for a better choice of purchase.-->
+        <p>
+            The Brother HL-T4000DW A3 Color Inkjet Printer stands out for its efficient printing
+            capabilities and high-quality output. Key features include fast printing speeds (up to 35 ppm
+            monochrome and 27 ppm color), a maximum resolution of 1,200 x 4,800 dpi, and a capacity to handle
+            various paper sizes. The model ensures versatile connectivity with Wi-Fi, Ethernet, and USB 2.0.
+
+        <ul><!--Unordered list with additional specification-->
+            <li>Print Speed: Up to 35 ppm in monochrome and 27 ppm in color for efficient printing</li>
+            <li>High Resolution: Offers up to 1,200 x 4,800 dpi for crisp and detailed print quality.</li>
+            <li>Paper Handling: Supports a variety of paper sizes, catering to versatile printing needs.</li>
+            <li> Connectivity Options: Includes Wi-Fi and Ethernet, enhancing accessibility and ease of use​​​​.
+            </li>
+            <li>Display: Equipped with a 5-line LCD Display for easy navigation and configuration.</li>
+            <li>Duplex Printing: Supports automatic duplex printing.</li>
+
+        </ul>
+        </p>
+        <br>
+        <table class="inputs">
+            <!--a table is made to present a form like structure which must be filled for ordering the product.-->
+            <tr>
+                <td>Quanitity:</td>
+                <td align="right"><input type="number" id="First"></td>
+            </tr>
+            <tr>
+                <td>Contact Number:</td>
+                <td align="right"><input type="number" id="Second"></td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td align="right"><input type="text" id="Second"></td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="submit()" class="bttn">Place
+                        Order</button><!--The buttons has a javascript placed on it and when an order is placed a pop-up message appears in the webpage with suitable sentence.-->
+                </td>
+            </tr>
+
+        </table>
+    </div>
+
+</body>
+
+</html>
